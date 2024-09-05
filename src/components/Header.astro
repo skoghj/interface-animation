@@ -1,5 +1,28 @@
 ---
+import Link from "../components/Link.astro";
 ---
-<div>
-Header - tilføj navigation mm.
+
+<div x-data="{ showmenu: false }" class="py-4 static w-full justify-end md:w-full md:py-4">
+  <div id="navbar" class="flex flex-row justify-between px-10">
+    <div id="logo">
+      <a href="#">Site logo</a>
+    </div>
+    <nav id="desktopmenu" class="hidden md:flex">
+      <ul class="flex flex-row gap-8">
+        <li class="text-purple-950 hover:text-rose-700"><Link href="#herounit">Københavnerbilleder</Link></li>
+        <li class="text-purple-950 hover:text-rose-700"><Link href="#kapitler">Bogens indhold </Link></li>
+        <li class="text-purple-950 hover:text-rose-700"><Link href="#forfatteren">Forfatteren</Link></li>
+        <li class="text-purple-950 hover:text-rose-700"><Link href="#form">Køb nu </Link></li>
+      </ul>
+    </nav>
+    <button id="burgermenu" class="md:hidden" x-on:click="showmenu = ! showmenu"><i class="fa-solid fa-bars"></i></button>
+  </div>
+  <nav id="mobilmenu" class="flex flex-col content-center p-4" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+    <ul>
+      <li class="text-center py-2 border-y-2"><Link href="#herounit">Herounit</Link></li>
+      <li class="text-center py-2 border-b-2"><Link href="#kapitler">Kapitler</Link></li>
+      <li class="text-center py-2 border-b-2"><Link href="#anmeldelser">Anmeldelser</Link></li>
+      <li class="text-center py-2 border-b-2"><Link href="#form">Køb</Link></li>
+    </ul>
+  </nav>
 </div>

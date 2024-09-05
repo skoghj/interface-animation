@@ -1,12 +1,210 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
 ---
-<MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-	</article>
+
+<MainLayout title="Københavner billeder">
+  <article class="w-full px-5 pt-10 md:px-0">
+    <section id="herounit" class="flex flex-col gap-2 md:grid md:mx-auto max-w-7xl w-full grid-cols-3 pb-10 md:gap-5">
+      <img src="/src/assets/images/cover.jpg" alt="kobenhavner billeder bog cover" class="col-start-1 col-end-3 object-cover w-[800px] h-[430px] rounded-lg" />
+      <div>
+        <h1 class="text-7xl font-bold font-garamond pb-6 text-herounit break-words">Københavner billeder</h1>
+        <p class="pb-6">En guide til hipster foto af Sten Simons</p>
+        <Button variant="secondary" size="small"><a href="#kapitler">Læs mere</a> </Button>
+      </div>
+    </section>
+
+    <section class="flex flex-col gap-2 pb-10 md:grid grid-cols-2 md:gap-10 justify-center mx-auto max-w-5xl">
+      <div class="text-left md:text-right">
+        <h2 class="font-bold">Kort om bogen</h2>
+        <p>Københavnerbilleder er de danske streetfotografers bibel: Det er en fusion mellem et kunstværk og en lærebog. Bogen gennemgår alle væsentlige aspekter af streetfotografering fra grundlæggende teknik til kreative eksperimenter. Alt sammen krydret med masser af inspirerende fotos. God læselyst!</p>
+      </div>
+      <div>
+        <h2 class="font-bold">Stamdata for bogen</h2>
+        <p>Titel: Københavnerbilleder - en guide til hipster foto Forfatter: Sten Simons Antal sider: 344 Forlag: Mellem Linjerne ISBN: 987-6-987654-32-1 Pris: 399.-</p>
+      </div>
+    </section>
+
+    <section class="flex flex-col md:grid md:grid-cols-3 gap-4 pb-10 text-center mx-auto max-w-5xl">
+      <div class="flex flex-col items-center">
+        <img src="/src/assets/images/oppefra.jpg" alt="book" />
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="/src/assets/images/openbook.jpg" alt="book" />
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="/src/assets/images/cover.jpg" alt="book" />
+      </div>
+    </section>
+
+    <section id="kapitler" class="flex flex-col gap-4 pb-10 mx-auto max-w-5xl">
+      <h2 class="text-3xl font-bold pb-2 text-herounit">Bogens kapitler</h2>
+      <article class="flex flex-col md:grid grid-cols-2 mx-auto max-w-6xl md:gap-10">
+        <div>
+          <div>
+            <p><span class="font-bold">Kapitel 1</span><br />Intro til street foto Hvad er street foto? Det handler i bund og grund om at skyde byens liv og byens geometri (urban geometry). I dette kapitel får du en grundig intro til hvad street foto er og et overblik over nogen af de kendte street-fotografer. Alt krydret med en masse gode eksempler på street fotos.</p>
+          </div>
+          <div><p><span class="font-bold">Kapitel 2</span><br /> Om at skyde street Vil du skyde street? Så er der ikke nogen vej udenom: Du skal ud på gaderne og prøve det! I dette kapitel får du en teknisk indføring i hvordan du bedst skyder street. Uanset om du er begynder eller professionel, er der mange gode tekniske tips og tricks til street-skyderiet.</p></div>
+          <div>
+            <p><span class="font-bold">Kapitel 3</span><br /> Om at finde det rette motiv Indimellem er man heldig, andre gange kommer man hjem helt uden gode motiver. Med et par tips og tricks til at finde de rette motiver, stiger chancen gevaldigt for at fange de gode motiver.</p>
+          </div>
+
+          <div>
+            <p><span class="font-bold">Kapitel 4</span><br />Digital street foto De fleste af os skyder oftest digitalt fordi det er billigere og nemmere. Og nogen teknikker og fremgangsmåder egner sig kun til digital street foto. I dette kapitel får du en række tips og tricks til digital street-foto.</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col">
+          <div>
+            <p><span class="font-bold md:col-start-2 md:col-end-3">Kapitel 5</span><br />Analog street foto Analog er sejt fordi det er mere “ægte,” dyrere og mere besværligt end digital. Det signalerer entusiasme. Nogle teknikker og fremgangsmåder egner sig bedst til analog street foto. I dette kapitel får du en række tips og tricks til analog street-foto.</p>
+          </div>
+          <div>
+            <p><span class="font-bold md:col-start-2 md:col-end-3">Kapitel 6</span><br /> Om at skyde sort/hvid Alle street-fotografer skyder sort/hvid nu og da. Nogen altid. Hvorfor? Hvad er der specielt ved sort/hvid fotografering, og hvad adskiller sort/hvid fra farvefotografering? Her får du en række tips og tricks til sort/hvid fotografering.</p>
+          </div>
+          <div>
+            <p><span class="font-bold">Kapitel 7</span><br /> Kreative teknikker Dobbelteksponeringer, ICM (intentional camera moves), smadrede objektiver, gamle filmruller og alle mulige andre, spændende kreative teknikker kan løfte dine fotografier fra at være kedelige dokumentationer af hverdagen til at blive vilde kunststykker. Så dyk ned i dette kapitel om eksperimenterende teknikker!</p>
+          </div>
+          <div>
+            <p><span class="font-bold">Kapitel 8</span><br />Kom helt tæt på! Street foto handler om at fotografere livet på gaden - men tør du at gå helt tæt på fremmede mennesker og knipse løs? Du kan lige så godt øve dig, for det er det der vil gøre dig til en bedre street-fotograf…</p>
+            <div class="pt-4 mx-auto md:col-start-2 md:col-end-3 md: flex justify-end">
+              <Link href="#" target="_blank" variant="secondary" size="small"> Download et prøvekapital </Link>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section class="border-solid border-2 rounded-2xl bg-zinc-300/40 pt-6 w-full p-4">
+      <div class="mx-auto max-w-5xl">
+        <h2 class="text-3xl font-bold pb-4 text-herounit">Anmeldelser af bogen</h2>
+        <div class="flex flex-col pb-10 gap-4 md:grid grid-cols-3 mx-auto max-w-6xl md:gap-10">
+          <div>
+            <span>
+              <i class="fa-solid fa-star text-herounit"></i>
+              <i class="fa-solid fa-star text-herounit"></i>
+              <i class="fa-solid fa-star text-herounit"></i>
+              <i class="fa-solid fa-star text-herounit"></i>
+              <i class="fa-solid fa-star text-herounit"></i>
+              <i class="fa-regular text-herounit fa-star"></i>
+            </span>
+            <div>Københavnerbilleder er en grundig introduktion til at skyde billeder med retro-kant. Hvad enten du er har arbejdet med foto siden 135-filmen kom på markedet, du kun har skudt digitalt eller er helt nybegynder, er der masser af tips og tricks i bogen. - Hanne Hovgaard, Berlingeren</div>
+          </div>
+          <div>
+            <span>
+              <i class="fa-solid fa-star text-herounit"></i>
+              <i class="fa-solid fa-star text-herounit"></i>
+              <i class="fa-solid fa-star text-herounit"></i>
+              <i class="fa-solid fa-star text-herounit"></i>
+              <i class="fa-regular fa-star text-herounit"></i>
+            </span>
+            <div>Teksten er underholdende, og billederne er sku’ flotte. Hvad mere skal man sige om en fotobog? - Kim Kloggaard, Fotojournalen.dk</div>
+          </div>
+          <div>
+            <span>
+              <i class="fa-solid fa-star text-herounit"></i>
+              <i class="fa-solid fa-star text-herounit"></i>
+              <i class="fa-solid fa-star text-herounit"></i>
+              <i class="fa-solid fa-star text-herounit"></i>
+              <i class="fa-solid fa-star text-herounit"></i>
+              <i class="fa-solid fa-star text-herounit"></i>
+            </span>
+            <div>Sten Simons kan det der - og han bliver bedre og bedre. Stens tredje fotobog er klart den bedste - her er han for alvor i sit rette element, meget bedre end “studiefotografering som begyndere.” Tillykke - godt arbejde. Volmer Hansen, Lukkertiden.dk</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="flex flex-wrap flex-col mx-auto max-w-5xl py-10">
+      <div class="pb-4">
+        <h2 class="font-bold text-3xl pb-4">Boggalleri</h2>
+        <p>Her kan du se billeder fra bogen</p>
+      </div>
+
+      <div class="columns-2 gap-4 sm:columns-3 md:grid md:grid-cols-4 mx-auto max-w-6xl">
+        <img src="/src/assets/images/pic_1.jpg" alt="galleri" class="w-80 h-60 object-cover" />
+        <img src="/src/assets/images/pic_2.jpg" alt="galleri" class="w-80 h-60 object-cover" />
+        <img src="/src/assets/images/pic_3.jpg" alt="galleri" class="w-80 h-60 object-cover" />
+        <img src="/src/assets/images/pic_4.jpg" alt="galleri" class="w-80 h-60 object-cover" />
+        <img src="/src/assets/images/pic_5.jpg" alt="galleri" class="w-80 h-60 object-cover" />
+        <img src="/src/assets/images/pic_6.jpg" alt="galleri" class="w-80 h-60 object-cover" />
+        <img src="/src/assets/images/pic_7.jpg" alt="galleri" class="w-80 h-60 object-cover" />
+        <img src="/src/assets/images/pic_8.jpg" alt="galleri" class="w-80 h-60 object-cover" />
+        <img src="/src/assets/images/pic_9.jpg" alt="galleri" class="w-80 h-60 object-cover" />
+        <img src="/src/assets/images/pic_10.jpg" alt="galleri" class="w-80 h-60 object-cover" />
+        <img src="/src/assets/images/pic_11.jpg" alt="galleri" class="w-80 h-60 object-cover" />
+        <img src="/src/assets/images/pic_12.jpg" alt="galleri" class="w-80 h-60 object-cover" />
+      </div>
+    </section>
+    <section class="flex flex-col gap-4 mx-auto max-w-5xl" id="forfatteren">
+      <h2 class="font-bold text-3xl text-herounit">Forfatteren</h2>
+      <div class="flex flex-col gap-4 pb-10 md:grid grid-cols-2 mx-auto max-w-6xl md:gap-10">
+        <div>
+          <img src="/src/assets/images/sten_simons.jpg" alt="forfatteren" class="w-full h-96 object-cover" />
+        </div>
+        <div>
+          <p>Sten Simons har en lang foto-karriere bag sig. Det hele startede i 00’erne, da han gik rundt i Pisserenden for at fotografere ungdommens forfald. Det ledte til en række udstillinger, og blev senere til hans først fotobog “Ungdomsdruk - pinlige billeder fra nattelivet.” Derefter tog karrieren fart: Han blev fotojournalist og dokumenterede en masse dagligdagsstof fra Amager på dagbladet “Amagerkaneren.” Sideløbende begyndte han at undervise i foto, og har skrevet et utal af bøger, herunder bestsellerne Scener fra S-toget, Brun mad - en visuel odysse, og lærebogen Fotografering for evnesvage.</p>
+        </div>
+      </div>
+    </section>
+    <section id="form">
+      <div>
+        <div class="border-t-2"></div>
+        <form class="flex flex-col w-2/3 md:max-w-md mx-auto">
+          <h1 class="font-bold pt-10 pb-4 text-3xl text-herounit">Køb Københavner billeder nu!</h1>
+
+          <div class="flex flex-col py-1 text-slate-800">
+            <label for="antal" class="pr-2 pb-1">Antal:</label>
+            <input type="number" id="antal" name="antal" placeholder="1" class="pointer-events-auto bg-gray-200/80 rounded-md border-none" />
+          </div>
+
+          <div class="flex flex-wrap py-1">
+            <span class="text-slate-800">Levering:</span>
+            <div class="flex flex-wrap gap-4 pl-4">
+              <div class="flex flex-cols items-center gap-2">
+                <input type="radio" id="postnord" name="levering" value="postnord" checked />
+                <label for="postnord" class="text-slate-600">PostNord</label>
+              </div>
+              <div class="flex flex-cols items-center gap-2">
+                <input type="radio" id="postnord" name="levering" value="postnord" />
+                <label for="afhentselv" class="text-slate-600">Afhent Selv</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col py-1">
+            <label for="navn" class="pr-1 pb-1">Navn:</label>
+            <input type="text" id="navn" name="navn" value="Anders And" class="w-auto bg-gray-200/80 text-slate-600 rounded-md border-none" />
+          </div>
+          <div class="flex flex-col py-1">
+            <label for="adresse" class="pb-1">Adresse:</label>
+            <input type="text" id="adresse" name="adresse" value="Pradisæblevej 8" class="w-auto bg-gray-200/80 text-slate-600 rounded-md border-none" />
+          </div>
+          <div class="flex flex-col py-1">
+            <label for="email" class="pb-1">E-mail:</label>
+            <input type="text" id="email" name="email" value="anders@andeby.dk" class="w-auto bg-gray-200/80 text-slate-600 rounded-md border-none" />
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="postnummer&by" class="pb-1">Postnummer & by:</label>
+            <input type="text" id="postnummer&by" name="postnr&by" value="0900" class="w-auto bg-gray-200/80 text-slate-600 rounded-md border-none" />
+            <select id="by" name="by" class="w-1/2 bg-gray-200/80bg-gray-200/80 bg-gray-200/80 text-slate-600 rounded-md border-none">
+              <option value="Andeby A">Andeby A</option>
+              <option value="Andeby B">Andeby B</option>
+              <option value="Andeby C">Andeby C</option>
+              <option value="Andeby D">Andeby D</option>
+            </select>
+          </div>
+          <div class="flex flex-col py-1">
+            <label for="telefon" class="pb-1">Telefon:</label>
+            <input type="text" id="telefon" name="telefon" value="555-555" class="w-auto bg-gray-200/80 bg-gray-200/80 text-slate-600 rounded-md border-none" />
+          </div>
+          <div class="py-4">
+            <input type="checkbox" />
+            <label for="betalning" class="text-slate-600">Ja tak til nyhedsbrev og tilbud</label>
+          </div>
+          <div class="flex gap-4 justify-end">
+            <Link href="#" target="_blank" variant="primary" size="medium">Til betaling </Link>
+          </div>
+        </form>
+      </div>
+    </section>
+  </article>
 </MainLayout>

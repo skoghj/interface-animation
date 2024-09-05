@@ -1,5 +1,28 @@
 ---
 // Henter parametrene fra Astro.props
-const { href="#", target="_self"} = Astro.props; 
+const { href = "#", target = "_self", variant = "text", size = "text" } = Astro.props;
+// target = "_self" betyder at åbne fane i samme fane. "_blank" betyder at åbne fane i ny fane.
+
+// Styling for link
+const linkStyling = "inline-block font-medium rounded-lg transition-colors";
+
+// Variant klasser
+const variantClasses = {
+  primary: "text-slate-50 bg-rose-800 hover:bg-rose-700",
+  secondary: "text-slate-50 bg-purple-950  hover:bg-rose-700",
+  textlink: "text-blue-600 underline hover:text-blue-800", // tekstlink variant
+};
+
+// Size klasser
+const sizeClasses = {
+  large: "text-2xl py-4 px-6",
+  medium: "text-xl py-3 px-4",
+  small: "text-base py-2 px-3",
+  text: "text-base", // tekstlink størrelse
+  standard: "",
+};
 ---
-<a href={href} class="underline" target={target}><slot /></a>
+
+<a href={href} target={target} class={`${linkStyling} ${variantClasses[variant]} ${sizeClasses[size]}`}>
+  <slot />
+</a>
