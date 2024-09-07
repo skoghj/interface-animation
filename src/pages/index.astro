@@ -2,7 +2,11 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
-
+import { Image } from "astro:assets";
+import book1 from "../assets/images/cover.webp";
+import book2 from "../assets/images/openbook.webp";
+import book3 from "../assets/images/oppefra.webp";
+import writer from "../assets/images/sten_simons.webp";
 const images = await Astro.glob("/src/assets/images/galleri/*").then((files) => {
   return files.map((file) => file.default);
 });
@@ -13,7 +17,7 @@ const images = await Astro.glob("/src/assets/images/galleri/*").then((files) => 
     <div class="w-full px-5 py-20 color-change-2x md:px-0">
       <section id="herounit" class="flex flex-col gap-2 md:grid md:mx-auto max-w-7xl w-full grid-cols-3 md:gap-5">
         <div class="herounitimage col-start-1 col-end-3">
-          <img src="/src/assets/images/cover.webp" alt="kobenhavner billeder bog cover" class="w-[820px] h-[500px] object-cover rounded-lg" />
+          <Image src={book1} alt="kobenhavner billeder bog cover" class="w-[820px] h-[500px] object-cover rounded-lg" />
         </div>
         <div class="herotitle">
           <h1 class="text-7xl font-bold font-garamond pb-6 text-herounit break-words text-focus-in hover:text-rose-700">Københavner billeder</h1>
