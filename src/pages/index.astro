@@ -17,7 +17,7 @@ const images = await Astro.glob("/src/assets/images/galleri/*").then((files) => 
     <div class="w-full px-5 py-20 color-change-2x md:px-0">
       <section id="herounit" class="flex flex-col gap-2 md:grid md:mx-auto max-w-7xl w-full grid-cols-3 md:gap-5">
         <div class="herounitimage col-start-1 col-end-3">
-          <Image src={book1} alt="kobenhavner billeder bog cover" class="w-[820px] h-[500px] object-cover rounded-lg" />
+          <Image src={book1} alt="kobenhavner billeder bog cover" class="md:w-[820px] md:h-[500px] object-cover rounded-lg" />
         </div>
         <div class="herotitle">
           <h1 class="text-7xl font-bold font-garamond pb-6 text-herounit break-words text-focus-in hover:text-rose-700">Københavner billeder</h1>
@@ -40,15 +40,15 @@ const images = await Astro.glob("/src/assets/images/galleri/*").then((files) => 
       </div>
     </section>
 
-    <section class="flex flex-col md:grid md:grid-cols-3 gap-4 pb-10 text-center mx-auto max-w-5xl bookimages">
+    <section class="flex flex-col md:grid md:grid-cols-3 gap-4 pb-10 text-center mx-auto max-w-5xl md:w-full bookimages">
       <div class="flex flex-col items-center animate__animated animate__flipInX animate__delay-1s">
-        <Image src={book1} alt="kobenhavner billeder bog cover" />
+        <Image src={book1} alt="koenhavner billeder bog cover" class="w-full max-w-[450px] h-auto object-cover" />
       </div>
       <div class="flex flex-col items-center animate__animated animate__flipInX animate__delay-2s">
-        <Image src={book2} alt="kobenhavner billeder bog" />
+        <Image src={book2} alt="kobenhavner billeder bog" class="w-full max-w-[450px] h-auto object-cover" />
       </div>
       <div class="flex flex-col items-center animate__animated animate__flipInX animate__delay-3s">
-        <Image src={book3} alt="kobenhavner billeder bog" />
+        <Image src={book3} alt="kobenhavner billeder bog" class="w-full max-w-[450px] h-auto object-cover" />
       </div>
     </section>
 
