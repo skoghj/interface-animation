@@ -24,10 +24,12 @@ import Link from "../components/Link.astro";
   </div>
   <nav id="mobilmenu" class="flex flex-col content-center p-4" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
     <ul>
-      <li class="text-center py-2 border-y-2 text-herounit hover:text-rose-700"><Link href="#herounit">Herounit</Link></li>
-      <li class="text-center py-2 border-b-2 text-herounit hover:text-rose-700"><Link href="#kapitler">Kapitler</Link></li>
-      <li class="text-center py-2 border-b-2 text-herounit hover:text-rose-700"><Link href="#anmeldelser">Anmeldelser</Link></li>
-      <li class="text-center py-2 border-b-2 text-herounit hover:text-rose-700"><Link href="#form">Køb</Link></li>
+      <li class="text-center py-2 border-y-2 text-herounit hover:text-rose-700"><Link href="#herounit">Københavnerbilleder</Link></li>
+      <li class="text-center py-2 border-b-2 text-herounit hover:text-rose-700"><Link href="#kapitler">Bogens indhold</Link></li>
+      <li class="text-center py-2 border-b-2 text-herounit hover:text-rose-700"><Link href="#forfatteren">Forfatteren</Link></li>
+      <li class="text-center py-2 border-b-2 text-herounit hover:text-rose-700">
+        <Link href="#form">Køb nu</Link>
+      </li>
     </ul>
   </nav>
 </div>
