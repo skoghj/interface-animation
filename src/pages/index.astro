@@ -42,13 +42,13 @@ const images = await Astro.glob("/src/assets/images/galleri/*").then((files) => 
 
     <section class="flex flex-col md:grid md:grid-cols-3 gap-4 pb-10 text-center mx-auto max-w-5xl bookimages">
       <div class="flex flex-col items-center animate__animated animate__flipInX animate__delay-1s">
-        <img src="/src/assets/images/oppefra.webp" alt="book" />
+        <Image src={book1} alt="kobenhavner billeder bog cover" />
       </div>
       <div class="flex flex-col items-center animate__animated animate__flipInX animate__delay-2s">
-        <img src="/src/assets/images/openbook.webp" alt="book" />
+        <Image src={book2} alt="kobenhavner billeder bog" />
       </div>
       <div class="flex flex-col items-center animate__animated animate__flipInX animate__delay-3s">
-        <img src="/src/assets/images/cover.webp " alt="book" />
+        <Image src={book3} alt="kobenhavner billeder bog" />
       </div>
     </section>
 
@@ -144,7 +144,7 @@ const images = await Astro.glob("/src/assets/images/galleri/*").then((files) => 
       <h2 class="font-bold text-3xl text-herounit">Forfatteren</h2>
       <div class="flex flex-col gap-4 pb-10 md:grid grid-cols-2 mx-auto max-w-6xl md:gap-10">
         <div class="forfatteren">
-          <img src="/src/assets/images/sten_simons.webp" alt="forfatteren" class="w-full h-96 object-cover blink-1" />
+          <Image src={writer} alt="writer" class="w-full h-96 object-cover blink-1" />
         </div>
         <div class="omforfatter">
           <p>Sten Simons har en lang foto-karriere bag sig. Det hele startede i 00’erne, da han gik rundt i Pisserenden for at fotografere ungdommens forfald. Det ledte til en række udstillinger, og blev senere til hans først fotobog “Ungdomsdruk - pinlige billeder fra nattelivet.” Derefter tog karrieren fart: Han blev fotojournalist og dokumenterede en masse dagligdagsstof fra Amager på dagbladet “Amagerkaneren.” Sideløbende begyndte han at undervise i foto, og har skrevet et utal af bøger, herunder bestsellerne Scener fra S-toget, Brun mad - en visuel odysse, og lærebogen Fotografering for evnesvage.</p>
