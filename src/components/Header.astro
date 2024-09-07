@@ -4,25 +4,30 @@ import Link from "../components/Link.astro";
 
 <div x-data="{ showmenu: false }" class="py-4 static w-full justify-end md:w-full md:py-4">
   <div id="navbar" class="flex flex-row justify-between px-10">
-    <div id="logo">
-      <a href="#">Site logo</a>
+    <div id="logo" class="text-herounit hover:text-rose-700 flex justify-center items-center">
+      <a href="#"
+        ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="text-flicker-in-glow size-8">
+          <path d="M11.25 4.533A9.707 9.707 0 0 0 6 3a9.735 9.735 0 0 0-3.25.555.75.75 0 0 0-.5.707v14.25a.75.75 0 0 0 1 .707A8.237 8.237 0 0 1 6 18.75c1.995 0 3.823.707 5.25 1.886V4.533ZM12.75 20.636A8.214 8.214 0 0 1 18 18.75c.966 0 1.89.166 2.75.47a.75.75 0 0 0 1-.708V4.262a.75.75 0 0 0-.5-.707A9.735 9.735 0 0 0 18 3a9.707 9.707 0 0 0-5.25 1.533v16.103Z"></path>
+        </svg>
+      </a>
+      <p>MellemLinjerne</p>
     </div>
     <nav id="desktopmenu" class="hidden md:flex">
       <ul class="flex flex-row gap-8">
-        <li class="text-purple-950 hover:text-rose-700"><Link href="#herounit">Københavnerbilleder</Link></li>
-        <li class="text-purple-950 hover:text-rose-700"><Link href="#kapitler">Bogens indhold </Link></li>
-        <li class="text-purple-950 hover:text-rose-700"><Link href="#forfatteren">Forfatteren</Link></li>
-        <li class="text-purple-950 hover:text-rose-700"><Link href="#form">Køb nu </Link></li>
+        <li class="text-herounitherounit hover:text-rose-700"><Link href="#herounit">Københavnerbilleder</Link></li>
+        <li class="text-herounitherounit hover:text-rose-700"><Link href="#kapitler">Bogens indhold </Link></li>
+        <li class="text-herounitherounit hover:text-rose-700"><Link href="#forfatteren">Forfatteren</Link></li>
+        <li class="text-herounitherounit hover:text-rose-700"><Link href="#form">Køb nu </Link></li>
       </ul>
     </nav>
     <button id="burgermenu" class="md:hidden" x-on:click="showmenu = ! showmenu"><i class="fa-solid fa-bars"></i></button>
   </div>
   <nav id="mobilmenu" class="flex flex-col content-center p-4" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
     <ul>
-      <li class="text-center py-2 border-y-2"><Link href="#herounit">Herounit</Link></li>
-      <li class="text-center py-2 border-b-2"><Link href="#kapitler">Kapitler</Link></li>
-      <li class="text-center py-2 border-b-2"><Link href="#anmeldelser">Anmeldelser</Link></li>
-      <li class="text-center py-2 border-b-2"><Link href="#form">Køb</Link></li>
+      <li class="text-center py-2 border-y-2 text-herounit hover:text-rose-700"><Link href="#herounit">Herounit</Link></li>
+      <li class="text-center py-2 border-b-2 text-herounit hover:text-rose-700"><Link href="#kapitler">Kapitler</Link></li>
+      <li class="text-center py-2 border-b-2 text-herounit hover:text-rose-700"><Link href="#anmeldelser">Anmeldelser</Link></li>
+      <li class="text-center py-2 border-b-2 text-herounit hover:text-rose-700"><Link href="#form">Køb</Link></li>
     </ul>
   </nav>
 </div>

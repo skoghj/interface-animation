@@ -13,10 +13,10 @@ const images = await Astro.glob("/src/assets/images/galleri/*").then((files) => 
     <div class="w-full px-5 py-20 color-change-2x md:px-0">
       <section id="herounit" class="flex flex-col gap-2 md:grid md:mx-auto max-w-7xl w-full grid-cols-3 md:gap-5">
         <div class="herounitimage col-start-1 col-end-3">
-          <img src="/src/assets/images/cover.jpg" alt="kobenhavner billeder bog cover" class="w-[820px] h-[500px] object-cover rounded-lg" />
+          <img src="/src/assets/images/cover.webp" alt="kobenhavner billeder bog cover" class="w-[820px] h-[500px] object-cover rounded-lg" />
         </div>
         <div class="herotitle">
-          <h1 class="text-7xl font-bold font-garamond pb-6 text-herounit break-words text-focus-in">Københavner billeder</h1>
+          <h1 class="text-7xl font-bold font-garamond pb-6 text-herounit break-words text-focus-in hover:text-rose-700">Københavner billeder</h1>
           <p class="pb-6 text-xl">En guide til hipster foto af Sten Simons</p>
           <div class="animate__animated animate__pulse">
             <Button variant="secondary" size="small"><a href="#kapitler">Læs mere</a> </Button>
@@ -38,13 +38,13 @@ const images = await Astro.glob("/src/assets/images/galleri/*").then((files) => 
 
     <section class="flex flex-col md:grid md:grid-cols-3 gap-4 pb-10 text-center mx-auto max-w-5xl bookimages">
       <div class="flex flex-col items-center animate__animated animate__flipInX animate__delay-1s">
-        <img src="/src/assets/images/oppefra.jpg" alt="book" />
+        <img src="/src/assets/images/oppefra.webp" alt="book" />
       </div>
       <div class="flex flex-col items-center animate__animated animate__flipInX animate__delay-2s">
-        <img src="/src/assets/images/openbook.jpg" alt="book" />
+        <img src="/src/assets/images/openbook.webp" alt="book" />
       </div>
       <div class="flex flex-col items-center animate__animated animate__flipInX animate__delay-3s">
-        <img src="/src/assets/images/cover.jpg " alt="book" />
+        <img src="/src/assets/images/cover.webp " alt="book" />
       </div>
     </section>
 
@@ -124,7 +124,7 @@ const images = await Astro.glob("/src/assets/images/galleri/*").then((files) => 
       </div>
     </section>
 
-    <section class="flex flex-col mx-auto py-10 max-w-5xl">
+    <section class="flex flex-col mx-auto py-10 max-w-5xl gallery">
       <div><h2 class="font-bold text-3xl pb-4 max-w-5xl">Boggalleri</h2></div>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-auto max-w-5xl">
         {
@@ -140,7 +140,7 @@ const images = await Astro.glob("/src/assets/images/galleri/*").then((files) => 
       <h2 class="font-bold text-3xl text-herounit">Forfatteren</h2>
       <div class="flex flex-col gap-4 pb-10 md:grid grid-cols-2 mx-auto max-w-6xl md:gap-10">
         <div class="forfatteren">
-          <img src="/src/assets/images/sten_simons.jpg" alt="forfatteren" class="w-full h-96 object-cover blink-1" />
+          <img src="/src/assets/images/sten_simons.webp" alt="forfatteren" class="w-full h-96 object-cover blink-1" />
         </div>
         <div class="omforfatter">
           <p>Sten Simons har en lang foto-karriere bag sig. Det hele startede i 00’erne, da han gik rundt i Pisserenden for at fotografere ungdommens forfald. Det ledte til en række udstillinger, og blev senere til hans først fotobog “Ungdomsdruk - pinlige billeder fra nattelivet.” Derefter tog karrieren fart: Han blev fotojournalist og dokumenterede en masse dagligdagsstof fra Amager på dagbladet “Amagerkaneren.” Sideløbende begyndte han at undervise i foto, og har skrevet et utal af bøger, herunder bestsellerne Scener fra S-toget, Brun mad - en visuel odysse, og lærebogen Fotografering for evnesvage.</p>
@@ -203,7 +203,7 @@ const images = await Astro.glob("/src/assets/images/galleri/*").then((files) => 
             <input type="checkbox" class="accent-blue-500" />
             <label for="betalning" class="text-slate-600">Ja tak til nyhedsbrev og tilbud</label>
           </div>
-          <div class="flex gap-4 justify-end">
+          <div class="flex gap-4 justify-end animate-pulse">
             <Link href="#" target="_blank" variant="primary" size="medium">Til betaling </Link>
           </div>
         </form>
@@ -256,5 +256,14 @@ const images = await Astro.glob("/src/assets/images/galleri/*").then((files) => 
   const omforfatter = document.querySelector(".omforfatter");
   inView(omforfatter, ({ target }) => {
     target.classList.add("animate__animated", "animate__fadeInRight", "fadeInOpacity");
+  });
+
+  import { animate, scroll } from "motion";
+
+  document.querySelectorAll(".gallery > div").forEach((item) => {
+    scroll(animate(item, { opacity: [0, 1, 1, 1] }), {
+      target: item,
+      offset: ["start end", "end end", "start start", "end start"],
+    });
   });
 </script>
